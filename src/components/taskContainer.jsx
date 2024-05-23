@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 function TaskContainer({ taskList,removeTask }) {
   const newFilteredTaskList = (event) => {
     const filteredTaskList = taskList.filter(task => task.taskId !== parseInt(event.target.dataset.taskReference));
