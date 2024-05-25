@@ -1,10 +1,16 @@
-import { useState } from "react"
+import { useState,useEffect } from "react"
 
 import TaskContainer from "./components/taskContainer" 
 import TaskController from "./components/taskController"
 
 function App() { 
-  const [taskList,setTaskList] = useState([]);
+  const saveTaskList = JSON.parse(localStorage.getItem("taskListLocal")) || [];
+  const [taskList,setTaskList] = useState(saveTaskList);
+  
+  useEffect(() => {
+    localStorage.setItem("taskListLocal",JSON.stringify(taskList));
+  },[taskList]);
+
   return (
     <>
      <h1 className="app-title">Task Tide</h1> 

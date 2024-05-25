@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function TaskController({ taskList,setTaskList }) {
-  const [taskId, setTaskId] = useState(0);
+  const [taskId, setTaskId] = useState((parseInt(taskList[taskList.length -1]?.taskId) + 1) || 0);
   const [taskDescription, setTaskDescription] = useState("");
 
   const updateTaskDescription = (event) => {

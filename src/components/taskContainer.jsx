@@ -31,6 +31,7 @@ function Task({ taskId, taskDescription,taskComplete,taskList,setTaskList}) {
         <input
           type="checkbox"
           id={taskId}
+          checked={taskComplete}
           onChange={(event) => completeTask(event)}
         />
         <p
