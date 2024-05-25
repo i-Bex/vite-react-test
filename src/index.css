@@ -23,3 +23,8 @@ body {
   margin-right:0.5rem;
   display:inline-block;
 }
+
+.task-container__task__head {
+  display:flex;
+  gap:1rem;
+}

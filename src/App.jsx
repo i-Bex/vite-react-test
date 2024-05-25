@@ -8,8 +8,8 @@ function App() {
   return (
     <>
      <h1 className="app-title">Task Tide</h1> 
-     <TaskController addTask={setTaskList} taskList={taskList}/> 
-     <TaskContainer taskList={taskList} removeTask={setTaskList}/> 
+     <TaskController taskList={taskList} setTaskList={setTaskList}/> 
+     <TaskContainer taskList={taskList} setTaskList={setTaskList}/> 
     </>
   )
 }
